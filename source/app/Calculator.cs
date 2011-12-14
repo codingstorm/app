@@ -4,7 +4,11 @@ using System.Linq;
 
 namespace app
 {
-  public class Calculator
+    using System.Security;
+    using System.Security.Principal;
+    using System.Threading;
+
+    public class Calculator
   {
     IDbConnection connection;
 
@@ -24,7 +28,13 @@ namespace app
         command.ExecuteNonQuery();
       }
 
-      return first + second;
+        IPrincipal principal = Thread.CurrentPrincipal;
+        if(principal.IsInRole(""))
+        {
+            this.shut_off();
+        }
+
+        return first + second;
     }
 
     static void ensure_all_are_positive(params int[] numbers)
@@ -34,7 +44,7 @@ namespace app
 
     public void shut_off()
     {
-      throw new NotImplementedException();
+      throw new SecurityException();
     }
   }
 }
