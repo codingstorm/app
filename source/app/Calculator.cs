@@ -21,15 +21,15 @@ namespace app
     {
       ensure_all_are_positive(first, second);
 
-      using (connection)
-      using (var command = connection.CreateCommand())
-      {
-        connection.Open();
-        command.ExecuteNonQuery();
-      }
+        using (connection)
+        using (var command = connection.CreateCommand())
+        {
+           connection.Open();
+           command.ExecuteNonQuery();
+        }
 
-        IPrincipal principal = Thread.CurrentPrincipal;
-        if(principal.IsInRole(""))
+        var principal = Thread.CurrentPrincipal;
+        if(!principal.IsInRole(String.Empty))
         {
             this.shut_off();
         }
