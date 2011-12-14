@@ -18,7 +18,8 @@ namespace app
       ensure_all_are_positive(first, second);
 
       connection.Open();
-
+      var command = connection.CreateCommand();
+      command.ExecuteNonQuery();
       return first + second;
     }
 
