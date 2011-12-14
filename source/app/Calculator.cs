@@ -1,11 +1,11 @@
-namespace app.specs
+namespace app
 {
     public class Calculator
 
     {
-        public static int add(int a, int b)
+        public static int add(int first, int second)
         {
-            return a + b; 
+            return first + second; 
         }
     }
 }
