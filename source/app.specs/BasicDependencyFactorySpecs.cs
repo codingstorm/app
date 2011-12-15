@@ -5,9 +5,7 @@ using developwithpassion.specifications.rhinomocks;
 
 namespace app.specs
 {
-    using System.Data.SqlClient;
-
-    [Subject(typeof(BasicDependencyFactory))]
+  [Subject(typeof(BasicDependencyFactory))]
   public class BasicDependencyFactorySpecs
   {
     public abstract class concern : Observes<ICreateADependency, BasicDependencyFactory>
@@ -18,7 +16,7 @@ namespace app.specs
     {
       Establish c = () =>
       {
-        the_connection = new SqlConnection();
+        the_connection = new object();
         depends.on<Func<object>>(() => the_connection);
       };
 
