@@ -77,7 +77,9 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="codekata\AnagramFinder.cs" />
+    <Compile Include="codekata\Anagrams.cs" />
+    <Compile Include="IFindAnagrams.cs" />
+    <Compile Include="IParseFiles.cs" />
     <Compile Include="MessageGenerator.cs" />
   </ItemGroup>
   <ItemGroup />
