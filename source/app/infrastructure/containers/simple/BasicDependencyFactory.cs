@@ -1,10 +1,19 @@
 ﻿namespace app.infrastructure.containers.simple
 {
-  public class BasicDependencyFactory : ICreateADependency
-  {
-    public object create()
+    using System;
+
+    public class BasicDependencyFactory : ICreateADependency
     {
-      throw new System.NotImplementedException();
-    }
+        Func<object> connection;
+
+        public BasicDependencyFactory(Func<object> connection)
+        {
+            this.connection = connection;
+        }
+
+        public object create()
+        {
+            return connection();
+        }
   }
 }
