@@ -125,13 +125,14 @@
     <Compile Include="DependencyFactoriesSpecs.cs" />
     <Compile Include="FrontControllerSpecs.cs" />
     <Compile Include="GreediestCtorSelectionSpecs.cs" />
+    <Compile Include="LazyContainerSpecs.cs" />
     <Compile Include="LogSpecs.cs" />
     <Compile Include="RequestCommandSpecs.cs" />
     <Compile Include="SimpleContainerSpecs.cs" />
     <Compile Include="SingleDependencyFactorySpecs.cs" />
     <Compile Include="StartSpecs.cs" />
     <Compile Include="StartupChainBuilderSpecs.cs" />
-    <Compile Include="StartupExceptionFactories.cs" />
+    <Compile Include="StartupExceptionFactoriesSpecs.cs" />
     <Compile Include="StartupSpecs.cs" />
     <Compile Include="StartupStepFactorySpecs.cs" />
     <Compile Include="StringExtensionsSpecs.cs" />

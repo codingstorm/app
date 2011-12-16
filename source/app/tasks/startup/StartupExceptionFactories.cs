@@ -1,6 +1,7 @@
 ﻿using System;
 using app.infrastructure;
 using app.infrastructure.containers.simple;
+using app.tasks.startup.steps;
 
 namespace app.tasks.startup
 {
@@ -11,5 +12,9 @@ namespace app.tasks.startup
 
     public static FactoryMissingExceptionFactory factory_not_registered = type =>
         new NotImplementedException("There is no factory registered that can create {0}".format(type.Name));
+
+    public static StartupStepPolicyViolationExceptionFactory startup_step_violation = (type, inner) =>
+      new NotImplementedException("The type {0} does not follow the policy for being a startup step".format(type.Name),inner);
+
   }
 }

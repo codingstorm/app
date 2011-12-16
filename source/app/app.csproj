@@ -85,6 +85,7 @@
     <Compile Include="infrastructure\containers\GreediestCtorSelection.cs" />
     <Compile Include="infrastructure\containers\IFetchDependencies.cs" />
     <Compile Include="infrastructure\containers\IPickTheCtorForAType.cs" />
+    <Compile Include="infrastructure\containers\LazyContainer.cs" />
     <Compile Include="infrastructure\containers\simple\AutomaticDependencyFactory.cs" />
     <Compile Include="infrastructure\containers\simple\BasicDependencyFactory.cs" />
     <Compile Include="infrastructure\containers\simple\DependencyFactoriesProvider.cs" />
