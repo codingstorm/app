@@ -19,5 +19,10 @@ namespace app.tasks.startup
     {
       return factory_resolver(typeof(AStartupStep));
     }
+
+    public static void by_running_steps_defined_in(string step_file_name)
+    {
+      throw new NotImplementedException();
+    }
   }
 }

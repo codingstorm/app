@@ -1,15 +1,10 @@
-﻿using app.tasks.startup.steps;
-
-namespace app.tasks.startup
+﻿namespace app.tasks.startup
 {
   public class Startup
   {
     public static void run()
     {
-      Start.by<ConfiguringInfrastructureServices>()
-        .followed_by<ConfiguringFrontController>()
-        .followed_by<ConfiguringFrontController>()
-        .finish_by<ConfiguringQueries>();
+      Start.by_running_steps_defined_in("startup_steps.txt");
     }
   }
 }
