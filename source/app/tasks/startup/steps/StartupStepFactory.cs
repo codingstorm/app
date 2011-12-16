@@ -6,15 +6,14 @@ namespace app.tasks.startup.steps
   {
     IRegisterItemsInTheContainer registration;
 
-      public StartupStepFactory(IRegisterItemsInTheContainer registration)
-      {
-          this.registration = registration;
-      }
+    public StartupStepFactory(IRegisterItemsInTheContainer registration)
+    {
+      this.registration = registration;
+    }
+
     public IRunAStartupStep create_step_from(Type step_type)
     {
-        IRunAStartupStep step = create_step_from(step_type);
-        registration.register(step);
-        return step;
+      return (IRunAStartupStep) Activator.CreateInstance(step_type, registration);
     }
   }
 }
