@@ -24,3 +24,4 @@ db_dev.rb
 log4net.config.xml
 web.config
 empty.cs
+startup_steps.txt

@@ -1,3 +1,0 @@
-﻿app.tasks.startup.steps.ConfiguringInfrastructureServices
-app.tasks.startup.steps.ConfiguringFrontController
-app.tasks.startup.steps.ConfiguringQueries
