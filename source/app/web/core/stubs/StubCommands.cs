@@ -17,9 +17,9 @@ namespace app.web.core.stubs
     {
             yield return new RequestCommand(IncomingRequest.was.made_for<ViewMainDepartmentsRequest>(), new TimedStory(new ViewAReport<IEnumerable<DepartmentItem>,GetTheMainDepartments>(Container.fetch.an<IDisplayReports>(),
               Container.fetch)));
-            yield return new RequestCommand(IncomingRequest.was.made_for<ViewDepartmentsInDepartmentRequest>(), new TimedStory(new ViewAReport<IEnumerable<DepartmentItem>,GetDepartmentsInDepartment>(Container.fetch.an<IDisplayReports>(),
+            yield return new RequestCommand(IncomingRequest.was.made_for<ViewDepartmentsInDepartment>(), new TimedStory(new ViewAReport<IEnumerable<DepartmentItem>,GetDepartmentsInDepartment>(Container.fetch.an<IDisplayReports>(),
               Container.fetch)));
-            yield return new RequestCommand(IncomingRequest.was.made_for<ViewProductsInDepartmentRequest>(), new TimedStory(new ViewAReport<IEnumerable<ProductItem>,GetDepartmentProducts>(Container.fetch.an<IDisplayReports>(),
+            yield return new RequestCommand(IncomingRequest.was.made_for<ViewProductsInDepartment>(), new TimedStory(new ViewAReport<IEnumerable<ProductItem>,GetDepartmentProducts>(Container.fetch.an<IDisplayReports>(),
               Container.fetch)));
     }
   }
