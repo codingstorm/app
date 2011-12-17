@@ -118,11 +118,15 @@
     <Compile Include="tasks\startup\ContainerRegistration.cs" />
     <Compile Include="tasks\startup\ICreateStartupChains.cs" />
     <Compile Include="tasks\startup\IRegisterItemsInTheContainer.cs" />
+    <Compile Include="tasks\startup\IConfigureRegistrationOptions.cs" />
+    <Compile Include="tasks\startup\RegisterInContainerAttribute.cs" />
     <Compile Include="tasks\startup\Start.cs" />
     <Compile Include="tasks\startup\Startup.cs" />
     <Compile Include="tasks\startup\StartupChainBuilder.cs" />
     <Compile Include="tasks\startup\StartupChainBuilderFactory.cs" />
     <Compile Include="tasks\startup\StartupExceptionFactories.cs" />
+    <Compile Include="tasks\startup\steps\AutomaticallyRegisterContainerItems.cs" />
+    <Compile Include="tasks\startup\steps\ConfigureCustomFrontControllerMechanisms.cs" />
     <Compile Include="tasks\startup\steps\ConfiguringFrontController.cs" />
     <Compile Include="tasks\startup\steps\ConfiguringInfrastructureServices.cs" />
     <Compile Include="tasks\startup\steps\ConfiguringQueries.cs" />
@@ -166,6 +170,7 @@
     <Compile Include="web\core\aspnet\stubs\StubPagePathRegistry.cs" />
     <Compile Include="web\core\stubs\StubRequestFactory.cs" />
     <Compile Include="web\core\TimedStory.cs" />
+    <Compile Include="web\core\TimedFrontController.cs" />
     <Compile Include="web\core\ViewAReport.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

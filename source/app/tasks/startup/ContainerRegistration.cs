@@ -1,9 +1,11 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using app.infrastructure.containers.simple;
 
 namespace app.tasks.startup
 {
+  [RegisterInContainer(true,typeof(IRegisterItemsInTheContainer))]
   public class ContainerRegistration : IRegisterItemsInTheContainer
   {
     IList<ICreateASingleDependency> factories;
@@ -19,6 +21,11 @@ namespace app.tasks.startup
     public void register<Implementation>()
     {
       register<Implementation, Implementation>();
+    }
+
+    public void register<Contract, Implementation>(Action<IConfigureRegistrationOptions<Contract>> option_configuration) where Implementation : Contract
+    {
+      throw new NotImplementedException();
     }
 
     public void register<Contract, Implementation>() where Implementation : Contract

@@ -1,8 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using app.tasks.startup;
 
 namespace app.web.core
 {
+  [RegisterInContainer(typeof(IFindCommands))]
   public class CommandRegistry : IFindCommands
   {
     IEnumerable<IProcessASingleRequest> commands;
