@@ -135,6 +135,7 @@
     <Compile Include="StartupExceptionFactoriesSpecs.cs" />
     <Compile Include="StartupSpecs.cs" />
     <Compile Include="StartupStepFactorySpecs.cs" />
+    <Compile Include="StoryUrlSpecs.cs" />
     <Compile Include="StringExtensionsSpecs.cs" />
     <Compile Include="TextWriterLoggerFactorySpecs.cs" />
     <Compile Include="TextWriterLoggerSpecs.cs" />
