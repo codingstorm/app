@@ -11,8 +11,8 @@ CodeFile="DepartmentBrowser.aspx.cs"
                {%>
               <tr class="ListItem">
 
-               <td><a href="<%= StoryUrl.to.run<ViewProductsInDepartmentRequest>()
-                                           .or<ViewDepartmentsInDepartmentRequest>()
+               <td><a href="<%= StoryUrl.to.run<ViewProductsInDepartment>()
+                                           .or<ViewDepartmentsInDepartment>()
                                            .based_on(department.has_products)
                                            .include(department,options => options.item(x => x.department_id))
                 %>"><%=department.name%></a></td>

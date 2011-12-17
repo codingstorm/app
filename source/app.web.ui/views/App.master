@@ -56,7 +56,7 @@
                     <li>
                         <ul>
                             <li><a href="StoreDirectory.aspx">Store Directory</a></li>
-                            <li><a href="<%= StoryUrl.to.run<ViewMainDepartmentsRequest>() %>">Department Browser</a></li>
+                            <li><a href="<%= StoryUrl.to.run<ViewMainDepartments>() %>">Department Browser</a></li>
                         </ul>
                     
                     </li>           
